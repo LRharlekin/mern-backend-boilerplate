@@ -11,3 +11,18 @@ In order to avoid port collisions, in the source code port value is 5000.
 # Overview
 
 This is a MERN backend boilerplate, following a standard MVC architecture.
+
+### Adapting the code to your project
+
+**1. Naming changes**
+
+Names (for variables, functions, files, etc.) in the boilerplate are chosen as if the main resource of this project were "items".
+
+Examples:
+
+- The main route to interact with resources is at path `/api/v1/items`.
+- The files with this main route as well as the respective controller methods are contained in files named **_items.js_**
+- The controller methods for some main CRUD operations are named `getAllItems(), createItem(), deleteItem()` etc.
+
+So, depending on what you are building, it makes sense to rename all of these first.
+Do a search-and-replace per file and rename, e.g. if you're building a job board rename everything to: jobs.js, getJobs, createJobs, jobsRouter, etc.
