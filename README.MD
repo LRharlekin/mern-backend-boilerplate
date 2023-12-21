@@ -14,7 +14,7 @@ This is a MERN backend boilerplate, following a standard MVC architecture.
 
 ### Adapting the code to your project
 
-**1. Naming changes**
+**1. Change the naming**
 
 Names (for variables, functions, files, etc.) in the boilerplate are chosen as if the main resource of this project were "items".
 
@@ -25,4 +25,6 @@ Examples:
 - The controller methods for some main CRUD operations are named `getAllItems(), createItem(), deleteItem()` etc.
 
 So, depending on what you are building, it makes sense to rename all of these first.
-Do a search-and-replace per file and rename, e.g. if you're building a job board rename everything to: jobs.js, getJobs, createJobs, jobsRouter, etc.
+Do a search-and-replace per file and rename, e.g. if you're building a job board rename everything to: getJobs, createJobs, jobsRouter, etc.
+
+If you rename the files in the routes and controllers directories (e.g. from items.js to jobs.js), also make sure to rename the respective paths when requiring these modules.
