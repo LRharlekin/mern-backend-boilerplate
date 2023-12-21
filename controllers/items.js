@@ -5,11 +5,11 @@ const getAllItems = (req, res) => {
 
 // get a single item
 const getItem = (req, res) => {
-  const item = db.find((item) => item.id === Number(req.params.id));
-  if (!item) {
-    return res.status(400).send(`Item with id ${req.params.id} wasn't found.`);
-  }
-  res.status(200).send(item);
+  // const item = db.find((item) => item.id === Number(req.params.id));
+  // if (!item) {
+  //   return res.status(400).send(`Item with id ${req.params.id} wasn't found.`);
+  // }
+  res.status(200).send(`get single item with ID: ${req.params.id}`);
 };
 
 // create a new item
@@ -19,11 +19,11 @@ const createItem = (req, res) => {
 
 // update a single item
 const updateItem = (req, res) => {
-  res.send("update item");
+  res.send(`update single item with ID: ${req.params.id}`);
 };
 // delete a single item
 const deleteItem = (req, res) => {
-  res.send("delete item");
+  res.send(`delete single item with ID: ${req.params.id}`);
 };
 
 module.exports = {
