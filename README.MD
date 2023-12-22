@@ -12,6 +12,11 @@ In order to avoid port collisions, in the source code port value is 5000.
 
 This is a MERN backend boilerplate, following a standard MVC architecture.
 
+### Dependencies, connecting to your MongoDB, etc.
+
+- npm i
+- provide your Connection String inside a dot.env config file, and assign to MONGO_URI
+
 ### Adapting the code to your project
 
 **1. Change the naming**

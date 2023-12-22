@@ -1,6 +1,19 @@
+// require Model
+const Item = require("../models/Item");
+
+/* 
+Documentation for Mongoose Queries: https://mongoosejs.com/docs/queries.html
+Mongoose models provide several static helper functions for CRUD operations.
+ */
+
 // get all the items
-const getAllItems = (req, res) => {
-  res.status(200).send("all items");
+const getAllItems = async (req, res) => {
+  try {
+    const items = await Item.find({});
+    res.status(200).json({ items });
+  } catch (error) {
+    res.status(500).json({ msg: error });
+  }
 };
 
 // get a single item
@@ -13,8 +26,12 @@ const getItem = (req, res) => {
 };
 
 // create a new item
-const createItem = (req, res) => {
-  res.send("create item");
+const createItem = async (req, res) => {
+  try {
+    const newItem = await Item.create(req.body);
+    res.status(201).json({ newItem });
+  } catch (error) {}
+  res.status(500).json({ msg: error });
 };
 
 // update a single item
