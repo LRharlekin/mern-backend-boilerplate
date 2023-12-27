@@ -34,9 +34,20 @@ Do a search-and-replace per file and rename, e.g. if you're building a job board
 
 If you rename the files in the routes and controllers directories (e.g. from items.js to jobs.js), also make sure to rename the respective paths when requiring these modules.
 
-### Features
+### Script to quickly populate your db with dummy data
 
-| Command    | Description                                    |
-| ---------- | ---------------------------------------------- |
-| git status | List all new or modified files                 |
-| git diff   | Show file differences that haven't been staged |
+The script in populate.js can be executed via node populate command, but is otherwise disconnected from the app.
+
+Create a .json file, point to it from the populate.js script, and run the script to quickly populate a new collection in your MongoDB with data.
+
+## Features
+
+### Queries implemented / ready to use
+
+- text filter via regex
+- sort filter
+- select filter
+- skip filter
+- limit filter
+- pagination logic using skip & limit
+- numeric filters
