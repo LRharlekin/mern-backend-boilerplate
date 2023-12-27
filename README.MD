@@ -33,3 +33,10 @@ So, depending on what you are building, it makes sense to rename all of these fi
 Do a search-and-replace per file and rename, e.g. if you're building a job board rename everything to: getJobs, createJobs, jobsRouter, etc.
 
 If you rename the files in the routes and controllers directories (e.g. from items.js to jobs.js), also make sure to rename the respective paths when requiring these modules.
+
+### Features
+
+| Command    | Description                                    |
+| ---------- | ---------------------------------------------- |
+| git status | List all new or modified files                 |
+| git diff   | Show file differences that haven't been staged |
