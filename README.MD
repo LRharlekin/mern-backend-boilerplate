@@ -42,6 +42,26 @@ Create a .json file, point to it from the populate.js script, and run the script
 
 ## Features
 
+### Req-Res-Lifecycle Diagram
+
+req > passes through middleware > passes through middleware > controller > passes through middleware, etc.
+
+E.g.: createItem (POST request to /api/v1/items) with valid auth header of a logged in / authorized user and with valid req body,
+
+1. passes through **authenticateUser middleware**, where...
+
+- auth header and token are checked,
+- then token payload is decrypted,
+- and the user's identifying info is attached to req as req.user property,
+- before passing the whole req on to the router
+
+2. Router routes the req to the correct controller/handler
+3. The controller createItem()
+
+- takes the userID from req.body.user and attaches it to the req.body as .createdBy property
+- then creates the new resource via mongoose query .create()
+- sends valid response
+
 ### Queries implemented / ready to use
 
 - text filter via regex
