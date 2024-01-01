@@ -46,6 +46,8 @@ Create a .json file, point to it from the populate.js script, and run the script
 
 req > passes through middleware > passes through middleware > controller > passes through middleware, etc.
 
+![diagram placeholder](https://www.polypid.com/wp-content/uploads/2015/05/graph-placeholder-500x249.jpg)
+
 E.g.: createItem (POST request to /api/v1/items) with valid auth header of a logged in / authorized user and with valid req body,
 
 1. passes through **authenticateUser middleware**, where...
