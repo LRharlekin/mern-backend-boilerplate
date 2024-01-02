@@ -40,6 +40,12 @@ The script in populate.js can be executed via node populate command, but is othe
 
 Create a .json file, point to it from the populate.js script, and run the script to quickly populate a new collection in your MongoDB with data.
 
+### (OPTIONAL) Use this Postman Collection
+
+[How to push Postman Collection scripts in Github](https://qaautomation.expert/2023/10/02/how-to-push-postman-collection-scripts-in-github/).
+
+[Import data from a Git repository](https://learning.postman.com/docs/getting-started/importing-and-exporting/importing-from-git/).
+
 ## Features
 
 ### Req-Res-Lifecycle Diagram
